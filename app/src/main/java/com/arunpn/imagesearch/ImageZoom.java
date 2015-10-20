@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.arunpn.imagesearch.ui.TouchImageView;
 import com.squareup.picasso.Picasso;
 
 import butterknife.Bind;
@@ -20,7 +21,7 @@ public class ImageZoom extends AppCompatActivity {
     @Bind(R.id.toolbar)
     Toolbar toolbar;
     @Bind(R.id.imageDetailView)
-    ImageView imageDetailView;
+    TouchImageView imageDetailView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
