@@ -3,4 +3,19 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string-array name="size_choice">
+        <item>NONE</item>
+        <item>icon</item>
+        <item>small</item>
+        <item>xxlarge</item>
+        <item>huge</item>
+    </string-array>
+
+    <string-array name="color_choice">
+        <item>NONE</item>
+        <item>gray</item>
+        <item>color</item>
+    </string-array>
+    <string name="title_activity_image_zoom">ImageZoom</string>
+
 </resources>
