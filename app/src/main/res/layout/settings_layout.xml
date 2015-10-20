@@ -1,67 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Image Size"
-        android:layout_alignBaseline="@+id/spinnerImageSize"
-        android:textSize="20sp"
-        android:layout_margin="20dp"
-        android:layout_marginBottom="40dp"
-        android:id="@+id/imageSize"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerImageSize"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_toEndOf="@+id/imageSize" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Color Filter"
-        android:layout_below="@id/imageSize"
-        android:layout_alignBaseline="@+id/spinnerColorFilter"
-        android:textSize="20sp"
-        android:id="@+id/colorFilter"
-         />
-
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinnerColorFilter"
-        android:layout_marginLeft="10dp"
-        android:layout_toEndOf="@+id/colorFilter"
-        android:layout_below="@+id/spinnerImageSize"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="Site"
-        android:layout_below="@id/colorFilter"
-        android:layout_alignBaseline="@+id/siteEditText"
-        android:textSize="20sp"
-        android:id="@+id/siteFilter"
-        />
-
-    <EditText
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/siteEditText"
-        android:layout_below="@+id/colorFilter"
-        android:layout_toEndOf="@+id/colorFilter"
-        />
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Size"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:id="@+id/imageSize"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinnerImageSize"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_gravity="center_vertical"
+            android:text="Color Filter"
+            android:textSize="20sp"
+            android:id="@+id/colorFilter"
+            />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fadingEdgeLength="30dp"
+            android:id="@+id/spinnerColorFilter"
+            />
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:text="Site"
+            android:textSize="20sp"
+            android:id="@+id/siteFilter"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/siteEditText"
+            />
+    </LinearLayout>
 
 
-
-</RelativeLayout>
+</LinearLayout>
