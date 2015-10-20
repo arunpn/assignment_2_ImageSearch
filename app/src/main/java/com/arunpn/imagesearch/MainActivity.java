@@ -26,6 +26,7 @@ import com.arunpn.imagesearch.model.ImageDetails;
 import com.arunpn.imagesearch.model.ResponseData;
 import com.arunpn.imagesearch.rest.ApiService;
 import com.arunpn.imagesearch.rest.RestClient;
+import com.etsy.android.grid.StaggeredGridView;
 
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     ApiService apiService;
     @Bind(R.id.gridView)
-    GridView gridView;
+    StaggeredGridView gridView;
     SearchAdapter adapter;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -75,7 +76,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                ImageDetails imageDetails = (ImageDetails) adapterView.getItemAtPosition(i);
+//                Intent intent = new Intent(MainActivity.this,ImageZoom.class);
+//                intent.putExtra("url",imageDetails.getUrl());
+//                startActivity(intent);
+//            }
+//        });
+
+        gridView.setOnItemClickListener(new StaggeredGridView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 ImageDetails imageDetails = (ImageDetails) adapterView.getItemAtPosition(i);
